@@ -57,5 +57,5 @@ public class Queue<T> {
         System.out.println("Queue цэвэрлэгдсэн.");
     }
 }
-//14:44
+//15.19
 
