@@ -29,6 +29,6 @@ public class Main {
         integerQueue.clear();
         System.out.print("Cleared ");
         integerQueue.display();
-        System.out.println("Queue has been cleared.");
+        System.out.println("Queue цэвэрлэгдсэн");
 }
 }

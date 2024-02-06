@@ -18,7 +18,7 @@ public class Queue<T> {
         if (!isEmpty()) {
             return items.removeFirst();
         } else {
-            System.out.println("Queue is empty.");
+            System.out.println("Queue хоосон байна.");
             return null;
         }
     }
@@ -39,7 +39,7 @@ public class Queue<T> {
             return items.getFirst();
             //lkjhgf
         } else {
-            System.out.println("Queue is empty.");
+            System.out.println("Queue хоосон байна.");
             return null;
         }
     }
@@ -54,7 +54,7 @@ public class Queue<T> {
     }
     public void clear() {
         items.clear();
-        System.out.println("Queue has been cleared.");
+        System.out.println("Queue цэвэрлэгдсэн.");
     }
 }
 //14:44
