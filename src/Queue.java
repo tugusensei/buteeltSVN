@@ -37,6 +37,7 @@ public class Queue<T> {
         //
         if (!isEmpty()) {
             return items.getFirst();
+            //lkjhgf
         } else {
             System.out.println("Queue is empty.");
             return null;
