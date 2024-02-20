@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Main {
+    private static int studentCounter = 1;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Queue<Integer> integerQueue = new Queue<>();
+        Queue<Student> studentQueue = new Queue<>();
 
         while (true) {
             System.out.println("\nХийх үйлдэлээ сонгоно уу:");
@@ -19,29 +21,33 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Нэмэх элементээ оруулна уу:");
-                    int element = scanner.nextInt();
-                    integerQueue.enqueue(element);
-                    System.out.println(element + " амжилттай нэмэгдлээ.");
+                    System.out.println("Оюутны нэрээ оруулна уу:");
+                    scanner.nextLine();
+                    String studentName = scanner.nextLine();
+                    System.out.println("Оюутны кодоо оруулна уу:");
+                    String studentCode = scanner.nextLine();
+                    Student student = new Student(studentName, studentCode);
+                    studentQueue.enqueue(student);
+                    System.out.println(studentName + " амжилттай нэмэгдлээ.");
                     break;
                 case 2:
-                    Integer dequeued = integerQueue.dequeue();
-                    if (dequeued != null)
-                        System.out.println("Хасагдсан элемент: " + dequeued);
+                    Student dequeuedStudent = studentQueue.dequeue();
+                    if (dequeuedStudent != null)
+                        System.out.println("Хасагдсан оюутан: " + dequeuedStudent.getStudentName());
                     break;
                 case 3:
-                    Integer frontElement = integerQueue.front();
-                    if (frontElement != null)
-                        System.out.println("Эхний элемент: " + frontElement);
+                    Student frontStudent = studentQueue.front();
+                    if (frontStudent != null)
+                        System.out.println("Эхний оюутан: " + frontStudent.getStudentName());
                     break;
                 case 4:
-                    System.out.println("Дараалалын хэмжээ: " + integerQueue.size());
+                    System.out.println("Дараалалын хэмжээ: " + studentQueue.size());
                     break;
                 case 5:
-                    integerQueue.display();
+                    studentQueue.display();
                     break;
                 case 6:
-                    integerQueue.clear();
+                    studentQueue.clear();
                     System.out.println("Дараалал цэвэрлэгдлээ.");
                     break;
                 case 7:
@@ -49,7 +55,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid choice.");
+                    System.out.println("Буруу сонголт.");
             }
         }
     }
