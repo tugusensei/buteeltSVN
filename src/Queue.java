@@ -80,3 +80,4 @@ public class Queue<T>{
 	        System.out.println("Дараалал цэвэрлэгдлээ.");
 	    }
 	}
+//3.28
