@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as 
 import tkinter.simpledialog
 import random
 import sqlite3
