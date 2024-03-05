@@ -2,7 +2,7 @@ import tkinter as tk
 import tkinter.simpledialog
 import random
 import sqlite3
-
+#kakakak
 class SnakeGame:
     def __init__(self, master, main_menu, username, difficulty):
         self.master = master
